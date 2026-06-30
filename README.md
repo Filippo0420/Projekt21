@@ -14,8 +14,8 @@ Projekt działa w całości w środowisku lokalnym z wykorzystaniem bibliotek Da
 * **Prezentacja:** `matplotlib` służy do generowania wykresów porównawczych weryfikujących skuteczność algorytmu.
 
 ## 3. Kroki uruchomienia
-Aby uruchomić projekt lokalnie:
-1. Upewnij się, że masz zainstalowanego Pythona w wersji 3.9+.
+Aby uruchomić projekt:
+1. Upewnij się, że masz zainstalowanego Pythona.
 2. Zainstaluj wymagane biblioteki w terminalu: `pip install requests pandas scikit-learn matplotlib`.
 3. Otwórz `main.ipynb` w środowisku Jupyter Notebook lub PyCharm.
 4. Uruchom wszystkie komórki sekwencyjnie. Pierwsze komórki odpowiadają za pobranie i zapis danych, kolejne za przetwarzanie, analizę i wizualizację.
@@ -23,4 +23,4 @@ Aby uruchomić projekt lokalnie:
 ## 4. Założenia, ograniczenia i możliwe ulepszenia
 * **Ograniczenia:** Podczas etapu pozyskiwania danych stwierdzono, że źródłowe API nakłada sztywny limit, zwracając maksymalnie 500 rekordów na zapytanie. Ogranicza to pojedynczą paczkę danych do około 3-4 dni.
 * **Założenia:** Przyjęto, że dzienna agregacja (średnia, min, max, suma) trafnie odzwierciedla profil pogodowy danego dnia, eliminując szum spowodowany krótkotrwałymi zmianami pogody.
-* **Możliwe ulepszenia:** W przypadku obsługi ogromnych zbiorów danych, logikę przetwarzania można przenieść z lokalnej biblioteki pandas do klastra AWS EMR przy użyciu PySpark.
+* **Możliwe ulepszenia:** Porównanie godzinowe pogody, aby mieć więcej wektorów cech do porównania przy limicie 500 rekordów na zapytanie.
